@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>QA Error Analysis Dashboard</title>
+<title>Operations Quality Dashboard</title>
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--tx:#1b1f24;--mu:#667085;--bd:#e3e6ea;--a:#7db4f7;--b:#f6c85f;--c:#f59a9a;--tr:#eceff3;color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1318;--card:#181e26;--tx:#e8ebef;--mu:#94a0b0;--bd:#2a323d;--a:#60a5fa;--b:#fbbf24;--c:#f87171;--tr:#262e39;color-scheme:dark}}
@@ -25,7 +25,7 @@ th{color:var(--mu);font-weight:600;position:sticky;top:0;background:var(--card)}
 .leg span{margin-right:12px;font-size:12px}.leg em{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px}
 .flt{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:12px}.flt label{display:flex;flex-direction:column;font-size:12px;color:var(--mu);gap:3px}.flt input,.flt select{font:inherit;padding:6px 8px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);max-width:220px}
 </style></head><body>
-<header><div><h1>QA Error Analysis Dashboard</h1><div class="sub" id="meta"></div></div>
+<header><div><h1>Operations Quality Dashboard</h1><div class="sub" id="meta"></div></div>
 <div><label class="btn">Load another CSV<input id="f" type="file" accept=".csv" hidden></label></div></header>
 <div class="flt"><label>Start date<select id="dS" onchange="apply()"></select></label><label>End date<select id="dE" onchange="apply()"></select></label><label>Week<select id="fW" onchange="apply()"></select></label><label>Project<select id="fP" onchange="apply()"></select></label><label>Location<select id="fL" onchange="fillP();apply()"></select></label><button onclick="resetF()">Reset</button></div>
 <div class="grid" id="kpi"></div>
